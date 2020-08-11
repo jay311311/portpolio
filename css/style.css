@@ -1,70 +1,134 @@
 *{
-    color: wheat;
+     color: #001234; 
     margin: 0 ;
     padding: 0 ;
 }
-body{
-    overflow-x: hidden;
-    background-color: rgb(0, 18, 52)
-   }
+body{overflow-x: hidden;}
 ul,li{list-style: none;}
+a{color:inherit;
+text-decoration: none;
+display: block;}
 .content_size{
-    width: 1200px;
-    height: 90%;
+    width: 1000px;
+    height: 80%;
 }
 h3 {
     margin-bottom: 30px;
     font-size: 3.5rem; 
 }
 
-#wrap>div {
-    opacity: 0;
+#wrap>div {  
     width: 100%;
     height: 100vh;
     padding: 25px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #001234}
+    background-color:  white}
     
  #wrap>div:nth-child(1),
- #wrap>div:nth-child(3){
-    margin: 0 ;
-    padding: 0;
-}
+ #wrap>div:nth-child(3){margin: 0 ;padding: 0;}
 
 
-.landing{position: relative;
-}
 
 .landing_effect{
-    position: absolute;
-    top: calc(50% - 85px);
-    left:  calc(50% - 85px);
-    z-index: 45;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
-.landing>img{
-    width: 1200px;
+.blind_letter{
+    color: blanchedalmond;
+    z-index: 2;
+    width: 700px;
+    height: 200px;
+     overflow: hidden;
+     position: absolute;
+     top: calc(50% - 85px);
+     left:  calc(50% - 350px);
+}
+ .blind_letter h2 {
+    color: blanchedalmond;
+    font-size: 8rem;
+    position: relative;
+    text-align: center;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transform: translateY(200px);
+} 
+.blind_letter p{
+    display: inline-block;
+    color: blanchedalmond;
+    font-size: 1rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transform: translateY(200px);
+}
+.landing_blind{
+    z-index: 1;
+    width: 100%;
     height: 100vh;
+    display: flex;
     position: absolute;
     top:0;
     left: 0;
-    opacity: 0;
-    animation: show 3s  forwards;  
-    animation-delay: 6s;
 }
-@keyframes show{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
+.blind{
+    width: 33.5%;
+    height: 100vh;
+    background-color: black;
+    animation: slide .5s ease-in-out forwards;
+
 }
-
-
+.blind.box1{animation-delay : 4.5s ;}  
+.blind.box2{animation-delay : 5s ;}
+.blind.box3{animation-delay : 5.5s ;}
+@keyframes slide {
+    0%{transform: translateY(0vh)}
+    100%{transform: translateY(-100vh)}
+}
+.landing_effect>img{
+    width: 100%;
+   height: 100vh;
+    position: absolute;
+    top:0;
+    left: 0;
+    opacity: 1;
+    animation: scale 5s  forwards;
+    animation-delay : 6s ;
+}
+ @keyframes scale{
+    0%{transform: scale(1.0);}
+    100%{transform: scale(1.1);}
+} 
 .landing_text{
-    opacity: 0;
-    position: relative;
-    left: 25%;
-    animation: show 2s ease-out forwards;  
-    animation-delay: 6s;
+    width: 100%;
+    height: 100vh;
+    position: absolute;;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 4;
+} 
+.landing_text object{
+  width: 100%;
+  display: none;
+}
+.landing_text .button{
+    display: none;
+    background:white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 93%;
+    left: calc(50% - 25px);
+    z-index: 6;
 }
 
 .about{position: relative;}
@@ -74,213 +138,132 @@ h3 {
     height:90%;
 }
 .navigator_bar{
-    width: 100%;
+    border-top-right-radius: 20px ;
+     background-color: #001234; 
+    border-top-right-radius: 20px;
+    height: 100vh;
+    width: 5%;
      position: fixed;
      top: 0;
      left:0;
-    z-index: 2;
+    z-index: 9;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100px); 
 }
 .navigator_bar .logo{
     width: 50px;
-    height: 50px;
-    margin-left: 25px;
-    margin-top: 10px;
-    opacity: 0;
-    animation: logo .4s forwards; 
-    animation-delay: 7s ;
-}
-@keyframes logo{
-    0%{
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-.navigator_bar ul{
-    width: 400px;
-    height: 60px;
-    position: relative;
-    top: 0;
-    left: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height:50px;
+    position: absolute;
+    top: 3%;
+    left: 10%;
 }
 
-.color{
-    color: #fcbe32;
+.navigator_bar ul{
+    width: 100%;
+    height: 360px;
+    position:relative;
+    top: 0;
+    left: 0;
 }
-.navigator_bar li{
-    transform:rotateX(90deg)
-}
-.navigator_bar ul a{
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    width:100px;
-    line-height: 30px;
+.navigator_bar i {
+    color: blanchedalmond;
+    width:100%;
+    margin: 10px 0;
+    line-height: 60px;
     font-size: 1.5rem;
-    font-weight:bold;
     text-align: center;
 } 
 
-.information_bar{
-    position:absolute;
-    top: 60%;
-    left: 5%;
-
+.navigator_bar i.color{
+    color:#F2B938;
 }
-.information_bar ul{
-    width: 80px;
-    height: 300px;
-}
-
-.information_bar ul li{
-    font-size: 30px;
-    text-decoration: none;
-    color: inherit;
-    width:30px;
-    height: 30px;
-    display: flex;
-    justify-content: colum;
-    margin: 20% 0;
-} 
-
-.information_bar i{
-    color: #fcbe32;
-   
-}
-.information_bar i:hover{
-    animation: turning 1.5s infinite ;
-    
-}
-@keyframes turning{
-    0%{ transform: rotate3d(0);}
-    100%{transform: rotate3d(0, 0, 5, 360deg);}
-}
-.information_bar ul li:nth-child(4) {
-    width: 15px;
-    height:200px;
-    border-right:1px solid #fcbe32;
-    margin: 30% 0;
- }
 .profil{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .profil .img{ 
     margin-right: 50px;
     width: 300px;
-    height: 300px;
+    height: 400px;
     background-color: #ff5f2e;
 }
+
 .profil .introduce{
-    width: 600px;
-    height:350px;
-    display: flex;
-    justify-content: center;
-    align-items:center ;
+     width: 600px;
+    height:400px; 
 } 
+
 .introduce q{
     margin: 10px;
     width: 100%;
 }
+
 .introduce cite{
     margin-left: 65%;
 }
+
 .profil .introduce p{
- margin-top: 30px;
+ margin: 10px 0 50px 0; 
 }
 
-
-.skills .character{
+.about  h4{
+    font-size: 1.25rem; 
+}
+.character .strength{
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-bottom: 30px;
+    /* padding-top: 10px; */
     flex-wrap: wrap;
 }
 .character dt{
-    width: 120px;
-    height: 120px;
-} 
-/* skill tool*/
-.skill_title{
-    margin-top: 30px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.skill_title h4{
-    font-size: 2rem;
-    width: 50%;
-    height: 5%;
-    text-align: center;
-}
-.skill_tool{
-    width: 100%;
-    height: 500px;
-    display:flex;
-    justify-content: space-between;
-}
-.skill_code,.skill_design{
-    padding: 10px;
-    width:100px;
-    height: 300px;
+ 
+    width: 110px;
+    height: 110px;
     
 }
-
-.skill_tool li{
-    width: 50px;
-    height: 50px;
-    position: relative;
-   top: 0;
-   left: 0; 
-
+.character dt object{
+    width: 100px;
+    height: 100px;
+} 
+.skill{
+    margin-top: 50px;;
+    width: 1000px;
+    
 }
-.skill i{
-    width: 50px;
-    line-height: 50px;
-     position: absolute;
-     top: 0;
-     left: 0; 
-  z-index: 3;
-    font-size: 3.5rem;
-    margin: 3px;
-    background-color: #001234;
-}
-.guagebar{
-
-    width: 120px;
-    margin:50px 0;
-    height:10px;
-    background-color: red;
-}
-/**/
-.project_content table{
-    width:80%;
-    height:550px;
-    border: 1px solid #fcbe32;
-}
-.project_list{
+.stack, .codes, .designs{
+    margin-left: 20px;
+    /* width: 500px;
+    height: 250px; */
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
-table th{
-    width:250px; 
-    height: 35px; 
-    background-color: #ff5f2e;
+.stack h4{
+    font-weight: 500;
+    font-size:1rem
 }
-table td{
-    border: 1px solid #fcbe32;
+ .skill>h4::after{
+    position: relative;
+
+    content:" ";
+    display: block;
+    position: relative;
+            top: -10px;
+            left: 120px; 
+            width: 850px;
+            height: auto;
+            
+border-bottom:  .5px dashed #001234;
+} 
+.skill h4, .skill li{
+    /* background-color: #fcbe32; */
+    width: 150px;
+    line-height: 30px;
+    text-align: center;
 }
 
 .contact_content{

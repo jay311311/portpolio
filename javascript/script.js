@@ -19,13 +19,13 @@ const navigatorBar = document.querySelector(".navigator_bar")
       text.animate([
          {opacity:1},{opacity:0}
       ],{duration:5000,
-         easing:"ease",
+         easing:"ease-out",
          fill: "forwards",});
       svg.animate([
-         {transform: "scale(40)",opacity: 0},
+         {transform: "scale(20)",opacity: 0},
          {transform: "scale(1)",opacity: 1}
       ], {duration:5500,
-         easing:"ease-out",
+         easing:"linear",
          fill: "forwards",
          delay:-1800})
          

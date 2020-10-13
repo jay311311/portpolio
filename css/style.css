@@ -6,6 +6,7 @@ html{ background-color: white;}
 }
 
 ul,li{list-style: none;}
+
 a{
     color:inherit;
     text-decoration: none;
@@ -22,6 +23,7 @@ h3 {
     margin: 35px 0; 
     font-size: 3rem; 
 }
+
 #about,
 #project,
 #contact
@@ -36,7 +38,11 @@ h3 {
      background:  white 
     }
     
-#landing{width: 100%; height: 60vh;}
+#landing{
+    width: 100%; 
+    height: 60vh;
+}
+
 #particles-js{
     width: 100%;
     height:100%;
@@ -45,14 +51,14 @@ h3 {
 }
 
 .landing_effect{
-clip-path: circle(250vh at 50% -190vh);
-background-color: black;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-  top: 0;
-  left: 0;    
+    clip-path: circle(250vh at 50% -190vh);
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    left: 0;    
 }
 
 .blind_letter{
@@ -62,8 +68,8 @@ background-color: black;
     width: 700px;
     height: 200px;
     overflow: hidden; 
-     top: calc(27% - 85px);
-     left:  calc(50% - 350px);
+    top: calc(27% - 85px);
+    left: calc(50% - 350px);
 }
 
  .blind_letter h2 {
@@ -88,9 +94,6 @@ background-color: black;
     overflow: hidden; 
     transform: translateY(200px);
 }
-
-
-
 
 .navigator_bar{
     position: absolute;
@@ -126,6 +129,7 @@ background-color: black;
     top: 0;
     left: 0;
 }
+
 .navigator_bar i {
     color:#91EAE4;
     width:100%;
@@ -134,15 +138,27 @@ background-color: black;
     font-size: 1.5rem;
     text-align: center;
 } 
-#main>div{opacity: 0;transform: translateY(100px); transition: all .7s ease-in-out;}
+
+#main>div{
+    opacity: 0;
+    transform: translateY(100px); 
+    transition: all .7s ease-in-out;
+}
+
 .navigator_bar i.color{color:#7f7fd5;}
-#main>div.show{opacity: 1; transform: translateY(0);}
+
+#main>div.show{
+    opacity: 1; 
+    transform: translateY(0);
+}
 
 .about{position: relative;}
+
 .about.content_size{
     width: 80%;
     height:80vh;
 }
+
 .about  h4{ font-size: 1.4rem; }
 
 .profil{
@@ -152,11 +168,11 @@ background-color: black;
     align-items: center;
 
 }
+
 .profil_color{
     width: 100%;
     height: 100%;
     position: absolute;
-    
 }
 
 .profil_img{ 
@@ -166,7 +182,11 @@ background-color: black;
     height: 280px;
     border-radius: 3px;
 }
-.profil_img img{width: 100%; height: 100%;}
+
+.profil_img img{
+    width: 100%; 
+    height: 100%;
+}
 
 .profil .introduce{
     padding-top: 30px;
@@ -175,8 +195,11 @@ background-color: black;
   justify-content: center;
   align-items: center;
 } 
+
 blockquote{overflow: hidden; color: #4141a3;;}
+
 .introduce_box{width: 90%;}
+
 .introduce q{
     font-weight: 700;
     font-size: 1.15rem;
@@ -195,12 +218,23 @@ blockquote{overflow: hidden; color: #4141a3;;}
     margin:10px 0;
 }
 
+.project_list{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center;
+}
 
+.project_list li{
+    margin:10px;
+    border-radius: 10px; 
+    overflow: hidden; 
+    position: relative; 
+    margin:10px;
+}
 
-
-.project_list{display: flex;flex-wrap: wrap; justify-content: center; align-items: center;}
-.project_list li{margin:10px;border-radius: 10px; overflow: hidden; position: relative; margin:10px}
 .project_list li a{height: 100%;}
+
 .project_list li::after{
     content:"";
     width: 100%; 
@@ -212,8 +246,11 @@ blockquote{overflow: hidden; color: #4141a3;;}
     transition: all .7s ;
 }
 .project_list li:hover::after{transform: translateY(0px);}
+
 .project_list li img{width:300px; height: 100%;}
+
 .project_list li:hover p{transform: translateY(0px);}
+
 .project_list li P{
     position: absolute; 
     top: 110px; 
@@ -222,10 +259,15 @@ blockquote{overflow: hidden; color: #4141a3;;}
     z-index: 333; 
     text-align: center;
     color: white;
-    font-size: 1.5rem; 
+    font-size: 1.15rem; 
     transform: translateY(-380px);
     transition: all .7s ease;
 }
+.project_list li p.title{
+    top:80px;
+    font-size: 1.5rem; 
+}
+
 .project_list li p span{
     position: relative;
     font-size: 1.2rem;
@@ -239,6 +281,7 @@ blockquote{overflow: hidden; color: #4141a3;;}
     display: block;
     transition: all .3s ease;
 }
+
 .project_list li p span:hover {
     background-color: white;
     color:#4141a3
@@ -254,18 +297,19 @@ blockquote{overflow: hidden; color: #4141a3;;}
     background: #4141a3;
     transition:400ms ease all;
   }
+
   .click::after{
     right:inherit;
     top:inherit;
     left:0;
     bottom:0;
   }
+
   .click:hover::before,.click:hover::after{
     width:100%;
     transition:800ms ease all;
   }
   
-
 .project_list li:nth-child(3){background-color: #202020;}
 
 #skill{
@@ -273,6 +317,7 @@ blockquote{overflow: hidden; color: #4141a3;;}
     width:100%;
     overflow: hidden;
 }
+
 #skill h4{
     color:#7F7FD5;
     text-align: center;
@@ -280,6 +325,7 @@ blockquote{overflow: hidden; color: #4141a3;;}
     padding-bottom:30px ;
     font-size: 2.2rem;
 }
+
 .skill_code{
     display: flex;
     justify-content: space-around;
@@ -291,8 +337,18 @@ blockquote{overflow: hidden; color: #4141a3;;}
     margin-left: 20px;
     display: flex;
 }
-.skill_code .codes img{ width:50px; height: auto;}
-.skill_code .codes span{display:block; }
+
+.skill_code .codes img{ 
+    width:50px; 
+    height: auto;
+}
+
+.skill_code .codes span{
+    display:block; 
+    color:#2d3436; 
+    font-family: 'Peddana', serif; 
+    font-size: 1.6rem;
+}
 
 
 #skill h4, #skill li{
@@ -306,14 +362,13 @@ blockquote{overflow: hidden; color: #4141a3;;}
     width:100%;
 }
 
+.contact_button{text-align:center;}
 
-.contact_button{
-    text-align:center;
-  }
 .contact_button span{
     font-size: 1.25rem;
       display: block; 
-      margin-bottom: 10px;}
+      margin-bottom: 10px;
+    }
     
 .contact_button:before{
     content:'';
@@ -321,6 +376,7 @@ blockquote{overflow: hidden; color: #4141a3;;}
     display:inline-block;
     vertical-align:middle;
   }
+
   button{
     padding-top: 10px;
     background:#7F7FD5;
@@ -334,10 +390,12 @@ blockquote{overflow: hidden; color: #4141a3;;}
     transition:800ms ease all;
     outline:none;
   }
+
   button:hover{
     background:#fff;
     color:#7F7FD5;
   }
+
   button:before,button:after{
     content:'';
     position:absolute;
@@ -348,12 +406,14 @@ blockquote{overflow: hidden; color: #4141a3;;}
     background: rgb(127, 127, 213);
     transition:400ms ease all;
   }
+
   button:after{
     right:inherit;
     top:inherit;
     left:0;
     bottom:0;
   }
+
   button:hover:before,button:hover:after{
     width:100%;
     transition:800ms ease all;
@@ -365,7 +425,9 @@ blockquote{overflow: hidden; color: #4141a3;;}
 
 }
 .contact_info div{margin-top: 20px; text-align: center;}
+
   .contact_info i {font-size: 26px;}
+
   .contact_info span{
     display: inline-block; 
     line-height: 30px;
@@ -373,26 +435,38 @@ blockquote{overflow: hidden; color: #4141a3;;}
     } 
 
   footer{
-      height: 50px;
-      text-align: center;
+    height: 50px;
+    text-align: center;
     color:  rgba(127, 127, 213,.7);   
   }
   
   @media screen and (max-width:1200px) { 
-    .blind_letter h2{
-        font-size: 6rem;
+    .blind_letter h2{font-size: 6rem;}
+
+    #skill{
+        width: 80%; 
+        margin:30px auto 0 auto;
     }
-    #skill{width: 80%; margin:30px auto 0 auto;}
+
     #skill h4, #skill li{
         width: 200px;
         margin-bottom: 20px;
         line-height: 30px;
         text-align: center;
     }
-    .skill_code .codes{flex-wrap: wrap; margin: 0 auto; justify-content: center;}
+
+    .skill_code .codes{
+        flex-wrap: wrap; 
+        margin: 0 auto; 
+        justify-content: center;
+    }
+
     .skill_code .codes img{width:70px; }
+
     .profil{display: block;}
+
     .profil_img{margin:0 auto}
+
     .about.content_size{ height: 100%;}
  }
 @media screen and (max-width:768px) {
@@ -405,19 +479,25 @@ blockquote{overflow: hidden; color: #4141a3;;}
     
  }
 @media screen and (max-width:480px) { 
-    .landing_effect {
-        clip-path: circle(95vh at 50% -53vh);}
+    .landing_effect {clip-path: circle(95vh at 50% -53vh);}
 
-.blind_letter h2{
-    font-size: 4rem;
-}
-.blind_letter p{font-size: 1rem;}
-#landing{height:45vh}
-.navigator_bar{width:50px}
-.navigator_bar ul{left:none; right:100%}
-.navigator_bar i {font-size: 1.2rem;}
-.project_list li img{width:260px;}
-.contact_button span{font-size: 1rem}
-button{font-size: 1.2rem;}
-.contact_info span{font-size:1rem;}
+    .blind_letter h2{font-size: 4rem;}
+
+    .blind_letter p{font-size: 1rem;}
+
+    #landing{height:45vh}
+
+    .navigator_bar{width:50px}
+
+    .navigator_bar ul{left:none; right:100%}
+
+    .navigator_bar i {font-size: 1.2rem;}
+
+    .project_list li img{width:260px;}
+
+    .contact_button span{font-size: 1rem}
+
+    button{font-size: 1.2rem;}
+
+    .contact_info span{font-size:1rem;}
  }
